@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>墨香书屋 - 静心阅读，品味人生</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">墨香<span>书屋</span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="active">首页</a>
+                <a href="#" onclick="scrollToCategory('all')">书库</a>
+                <a href="#" onclick="showToast('排行榜功能开发中')">排行榜</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="搜小说/作者..." onkeydown="if(event.key==='Enter') searchNovels()">
+                    <button onclick="searchNovels()">🔍</button>
+                </div>
+            </nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <!-- 主内容 -->
+    <div class="main">
+        <div class="container">
+            <!-- Banner -->
+            <div class="banner fade-in">
+                <div class="banner-content">
+                    <span class="banner-tag">🔥 推荐</span>
+                    <h2 class="banner-title" id="bannerTitle">星辰之巅</h2>
+                    <p class="banner-desc" id="bannerDesc">少年林尘偶得星辰古玉，从此踏上通天仙途...</p>
+                </div>
+            </div>
+
+            <!-- 分类导航 -->
+            <div class="categories" id="categoryList"></div>
+
+            <!-- 小说网格 -->
+            <div class="section-header">
+                <h3 class="section-title" id="sectionTitle">📚 全部小说</h3>
+                <span class="section-more" id="novelCount"></span>
+            </div>
+            <div class="novel-grid" id="novelGrid"></div>
+        </div>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <p id="footerText"></p>
+        </footer>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
