@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阅读 - 墨香书屋</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 阅读器头部 -->
+    <header class="reader-header">
+        <a class="reader-back" id="backLink">
+            <span>←</span>
+            <span>返回</span>
+        </a>
+        <span class="reader-nav-title" id="readerNavTitle">第 X 章</span>
+        <span></span>
+    </header>
+
+    <!-- 阅读内容 -->
+    <div class="reader-content" id="readerContent">
+        <h2 class="reader-chapter-title" id="readerChapterTitle"></h2>
+        <div class="reader-text" id="readerText"></div>
+
+        <!-- 上下章导航 -->
+        <div class="reader-nav-buttons">
+            <button class="btn btn-secondary" id="prevBtn">← 上一章</button>
+            <button class="btn btn-primary" id="nextBtn">下一章 →</button>
+        </div>
+    </div>
+
+    <!-- 阅读器底部设置 -->
+    <div class="reader-settings">
+        <div class="font-size-controls">
+            <button id="fontDec">A-</button>
+            <span id="fontSizeDisplay">18</span>
+            <button id="fontInc">A+</button>
+        </div>
+
+        <div class="theme-controls">
+            <button class="theme-btn dark" onclick="setTheme('default')" title="深色"></button>
+            <button class="theme-btn paper" onclick="setTheme('paper')" title="羊皮纸"></button>
+            <button class="theme-btn green" onclick="setTheme('green')" title="护眼绿"></button>
+            <button class="theme-btn blue" onclick="setTheme('blue')" title="浅蓝"></button>
+        </div>
+
+        <button id="scrollSaveBtn">📌 记住位置</button>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/reader.js"></script>
+</body>
+</html>
